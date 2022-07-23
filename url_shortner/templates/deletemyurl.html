@@ -1,0 +1,20 @@
+
+{% extends "base.html"%}
+{%block content%}
+<div class="global-container">
+	<div class="card login-form">
+		<div class="card-body">
+			<h3 class="card-title text-center">Select Url to delete</h3>
+				
+				<form action = 'delete' method='POST'>
+				{% csrf_token %}
+				{% for f1 in f%}
+					<input type=radio name='code' id='code' value='{{f1.uid}}'>{{f1.url}}(Code:{{f1.uid}})<br>
+				{%endfor%}
+				<input type='submit' class="btn btn-primary btn-block " align='center'> 
+				</form>
+		</div>
+	</div>
+</div>
+
+{%endblock%}

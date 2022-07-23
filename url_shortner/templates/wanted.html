@@ -1,0 +1,44 @@
+{% extends "base.html"%}
+{%block content%}
+<div class="global-container">
+	<div class="card login-form">
+        <div class="card-body">
+            <h3 class="card-title text-center">Important Urls</h3>
+            <div class="card-text">
+                
+                <div align='center'>
+                    <form action="wanted" method="POST">
+                    {% csrf_token %}
+                    Enter Code you wish to acquire<br><br><input type="text" name="uid" required><br>
+                    <input type="submit" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+
+                {%if f%}
+        <ol style="list-style: decimal inside;">
+            <table > 
+            <h2><header align="center" style="text-transform:uppercase;"> Wanted urls</header> </h2>
+            <thead  style="text-transform:uppercase;">
+            
+            
+            <tr>
+                <td width="10%">S.NO.</td><td width="70%">Target</td><td width="20%">Code</td>
+            </tr>
+            
+            </thead>
+            {% for f1 in f  %}
+                <tr>
+                    <td style ="text-align: center; display: list-item;" ></td>
+                    <td  style="white-space: nowrap; text-overflow:ellipsis; overflow: hidden; max-width:1px;">{{f1.target}}</td>
+                    <td  ><a href="../urls/{{f1.uid}}">{{f1.uid}}</a></td>
+                </tr>
+            {% endfor %}
+            </table>
+        </ol>
+        
+        {%endif%}
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

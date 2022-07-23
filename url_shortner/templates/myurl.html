@@ -1,0 +1,39 @@
+{% extends "base.html"%}
+{%block content%}
+<div class="global-container">
+	<div class="card login-form" >
+        <div class="card-body" >
+
+        {%if f%}
+        <ol style="list-style: decimal inside;">
+            <table > 
+            <h2><header align="center" style="text-transform:uppercase;"> saved urls</header> </h2>
+            <thead  style="text-transform:uppercase;">
+            
+            
+            <tr>
+                <td width="10%">S.NO.</td><td width="70%">URL</td><td width="20%">Code</td>
+            </tr>
+            
+            </thead>
+            {% for f1 in f  %}
+                <tr>
+                    <td style ="text-align: center; display: list-item;" ></td>
+                    <td style="white-space: nowrap; text-overflow:ellipsis; overflow: hidden; max-width:1px;"><a href='{{f1.url}}' >{{f1.url}}</a></td>
+                    <td  ><a href="../urls/{{f1.uid}}">{{f1.uid}}</a></td>
+                </tr>
+            {% endfor %}
+            </table>
+        </ol>
+        
+        {%endif%}
+    <div align="center">
+        <a href='delete'><button id="sbtn" class="btn btn-primary btn-block mt-2">Delete urls</button></a> 
+        <a href='update'> <button id="sbtn" class="btn btn-primary btn-block mt-2">Update existing urls</button></a> 
+        <a href='wanted'><button id="sbtn" class="btn btn-primary btn-block mt-2"> Wanted Codes</button></a> 
+    </div>
+</div>
+</div>
+</div>
+
+{%endblock%}

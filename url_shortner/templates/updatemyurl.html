@@ -1,0 +1,33 @@
+
+{% extends "base.html"%}
+{%block content%}
+<div class="global-container">
+	<div class="card login-form">
+	<div class="card-body">
+		<h3 class="card-title text-center">Select Url to Update</h3>
+		<div class="card-text">
+            
+<form action = 'update' method='POST'>
+{% csrf_token %}
+<h5 class="card-title text-left">URL -> CODE</h5>
+{% for f1 in f%}
+
+	<input type=radio name='uid'  value='{{f1.uid}}'>{{f1.url}} -> {{f1.uid}}
+	<br>
+	
+{%endfor%}
+
+<br>
+<div align='center'>
+<h4>Enter new url</h4><br><input type=text  name='new_url' required><br>
+<input type='submit' class="btn btn-primary btn-block mt-3">
+</div> 
+</form>
+
+
+		</div>
+	</div>
+</div>
+</div>
+
+{%endblock%}

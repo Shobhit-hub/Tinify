@@ -1,0 +1,90 @@
+html,body { 
+    height: 100%; 
+    background-color:#0c0032;
+}
+
+.global-container{
+    height:80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0c0032;
+}
+
+form{
+    padding-top: 10px;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.card-title{ font-weight:300; }
+
+
+
+.btn{
+    font-size: 14px;
+    margin-top:20px;
+    margin-left:5px;
+    margin-right:5px;
+    background-color: #0c0032;
+    border: 0px;
+}
+
+td{
+    padding :1px 10px;
+  }
+.login-form{ 
+    width:500px;
+    margin:20px;
+    color:#ffffff;
+    background-color:#282828;
+}
+.wide-form{ 
+  width:1000px;
+  margin:20px;
+  color:#ffffff;
+  background-color:#282828;
+}
+
+.sign-up{
+    text-align:center;
+    padding:20px 0 0;
+}
+
+.alert{
+    margin-bottom:0px;
+    font-size: 13px;
+    margin-top:0px;
+}
+
+ .header {
+  overflow: hidden;
+  background-color:#d7e0f9;
+  padding: 1px 10px;
+  box-shadow: 0px 0px 10px #0c0032 inset;
+}
+
+.header a {
+  float: left;
+  color: #0c0032;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+} 
+ .header-left {
+float: left;
+}
+.header-right {
+    float: right;
+    } 
+.card
+{
+    box-shadow: 0px 0px 5px #0c0032 inset;
+}
+
+.header a:hover {
+color:rgb(66, 187, 243);
+}
